@@ -117,6 +117,17 @@
             height: 100%;
             border: none;
         }
+        
+        #slide-viewer {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #slide-viewer iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -145,46 +156,41 @@
         <section class="presentation-section">
             <h2>Презентация проекта</h2>
             <div class="presentation-container">
-                <div class="embed-container">
-                    <!-- Embed the presentation using Microsoft Office Online Viewer -->
-                    <iframe id="presentationFrame" 
-                            width="100%" 
-                            height="100%" 
-                            frameborder="0" 
-                            scrolling="no"
-                            title="Презентация проекта 'Старт на луну'"></iframe>
+                <div class="slides-container">
+                    <!-- Presentation viewer -->
+                    <div id="slides-container" style="position: relative; width: 100%; max-width: 800px; height: 500px; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; margin: 0 auto;">
+                        <!-- Slides will be dynamically inserted here -->
+                        <div id="slide-viewer" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: #f0f0f0;">
+                            <div style="text-align: center; padding: 20px;">
+                                <p>Загрузка презентации...</p>
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%233498db' opacity='0.2'/%3E%3Cpath d='M12 2a10 10 0 0 1 10 10' stroke='%233498db' stroke-width='2' fill='none'/%3E%3C/svg%3E" alt="Loading..." />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation controls -->
+                    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;">
+                        <button id="prev-slide" onclick="prevSlide()" style="background-color: #3498db; color: white; border: none; padding: 8px 15px; cursor: pointer; border-radius: 4px;">&lt; Назад</button>
+                        <span id="slide-counter">Слайд 1 из 1</span>
+                        <button id="next-slide" onclick="nextSlide()" style="background-color: #3498db; color: white; border: none; padding: 8px 15px; cursor: pointer; border-radius: 4px;">Вперед &gt;</button>
+                    </div>
                 </div>
                 
                 <div style="margin: 20px auto; max-width: 800px; text-align: center;">
-                    <p><strong>Примечание:</strong> Если презентация не отображается выше, используйте одну из альтернативных опций:</p>
+                    <p><strong>Примечание:</strong> Презентация загружена в систему и отображается на этой странице.</p>
                     
                     <div style="margin: 20px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-                        <button onclick="window.open('./%D0%A1%D1%82%D0%B0%D1%80%D1%82%20%D0%BD%D0%B0%20%D0%BB%D1%83%D0%BD%D1%83.pptx', '_blank')" 
+                        <button onclick="window.open('./%D0%A1%D1%82%D0%B0%D1%80%D1%82%20%D0%BD%D0%B0%20%D0%BB%D1%83%D0%BD%D1%83%20-%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F.pptx', '_blank')" 
                                 style="background-color: #3498db; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; margin: 5px;">
                             Открыть в PowerPoint
                         </button>
                         
-                        <a href="./%D0%A1%D1%82%D0%B0%D1%80%D1%82%20%D0%BD%D0%B0%20%D0%BB%D1%83%D0%BD%D1%83.pptx" 
-                           download="Старт на луну.pptx" 
+                        <a href="./%D0%A1%D1%82%D0%B0%D1%80%D1%82%20%D0%BD%D0%B0%20%D0%BB%D1%83%D0%BD%D1%83%20-%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F.pptx" 
+                           download="Старт на луну - актуальная версия.pptx" 
                            style="display: inline-block; padding: 10px 20px; background-color: #27ae60; color: white; text-decoration: none; border-radius: 4px; margin: 5px;">
                             Скачать презентацию
                         </a>
-                        
-                        <button onclick="showInstructions()" 
-                                style="background-color: #9b59b6; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; margin: 5px;">
-                            Как открыть онлайн
-                        </button>
                     </div>
-                </div>
-                
-                <div id="instructions" style="display: none; margin-top: 20px; padding: 20px; background-color: #e8f4fc; border-radius: 8px; text-align: center;">
-                    <h3>Инструкция по онлайн-просмотру</h3>
-                    <p>Для онлайн-демонстрации презентации:</p>
-                    <ol style="text-align: left; margin: 15px auto; max-width: 600px;">
-                        <li>Загрузите файл на Google Диск и откройте через Google Презентации</li>
-                        <li>Или используйте Microsoft Office Online (требуется учетная запись Microsoft)</li>
-                        <li>Альтернативно, откройте в LibreOffice Impress (бесплатный офисный пакет)</li>
-                    </ol>
                 </div>
             </div>
         </section>
@@ -195,20 +201,67 @@
     </footer>
     
     <script>
-        function showInstructions() {
-            document.getElementById('instructions').style.display = 'block';
+        // Variables to hold presentation data
+        let currentSlideIndex = 0;
+        let slides = [];
+        
+        // Function to initialize the presentation viewer
+        function initPresentationViewer() {
+            // Attempt to load the presentation using Office Online Viewer in an iframe
+            const slideViewer = document.getElementById('slide-viewer');
+            
+            // Clear any existing content
+            slideViewer.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;"><p>Загрузка презентации...</p></div>';
+            
+            // Create iframe for Office Online Viewer
+            const iframe = document.createElement('iframe');
+            iframe.id = 'presentationFrame';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.border = 'none';
+            iframe.frameBorder = '0';
+            iframe.scrolling = 'auto';
+            iframe.title = 'Презентация проекта \'Старт на луну\'';
+            
+            // Handle potential CORS issues and fallbacks
+            iframe.onerror = function() {
+                slideViewer.innerHTML = `
+                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; padding: 20px; text-align: center;">
+                        <h3>Не удалось загрузить презентацию онлайн</h3>
+                        <p>Попробуйте один из следующих вариантов:</p>
+                        <button onclick="window.open('./Старт на луну.pptx', '_blank')" style="margin: 10px; padding: 10px 20px; background-color: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer;">Открыть в PowerPoint Online</button>
+                        <a href="./Старт на луну.pptx" download="Старт на луну.pptx" style="display: inline-block; margin: 10px; padding: 10px 20px; background-color: #27ae60; color: white; text-decoration: none; border-radius: 4px;">Скачать презентацию</a>
+                    </div>`;
+            };
+            
+            // Set the source to the Office Online Viewer with our presentation
+            const presentationPath = window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1) + 'Старт на луну - актуальная версия.pptx';
+            const encodedPresentationPath = encodeURIComponent(presentationPath);
+            iframe.src = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodedPresentationPath;
+            
+            // Replace the loading indicator with the iframe
+            setTimeout(() => {
+                slideViewer.innerHTML = '';
+                slideViewer.appendChild(iframe);
+                
+                // Update slide counter
+                document.getElementById('slide-counter').textContent = 'Презентация';
+            }, 1000); // Small delay to show loading message
         }
         
-        // Set the presentation frame source when the page loads
-        window.onload = function() {
-            var presentationFrame = document.getElementById('presentationFrame');
-            var baseUrl = window.location.origin + window.location.pathname;
-            // Remove the filename from the path to get the directory
-            var directoryUrl = baseUrl.substring(0, baseUrl.lastIndexOf('/')) + '/';
-            var presentationUrl = encodeURIComponent(directoryUrl + '%D0%A1%D1%82%D0%B0%D1%80%D1%82%20%D0%BD%D0%B0%20%D0%BB%D1%83%D0%BD%D1%83.pptx');
-            var officeViewerUrl = 'https://view.officeapps.live.com/op/embed.aspx?src=' + presentationUrl;
-            presentationFrame.src = officeViewerUrl;
-        };
+        // Slide navigation functions (for future enhancement if needed)
+        function nextSlide() {
+            // Placeholder for future implementation
+        }
+        
+        function prevSlide() {
+            // Placeholder for future implementation
+        }
+        
+        // Initialize the presentation when the page loads
+        window.addEventListener('load', function() {
+            initPresentationViewer();
+        });
     </script>
 </body>
 </html>
