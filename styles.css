@@ -5,14 +5,14 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
 }
 
 header {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background: #2c3e50;
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -24,37 +24,40 @@ header h1 {
 }
 
 main {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
 .intro {
-    background: white;
+    background: #f8f9fa;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 2rem;
+    border-left: 4px solid #3498db;
 }
 
 .forts {
-    display: grid;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     margin-bottom: 2rem;
 }
 
 .fort-card {
-    background: white;
+    background: #ffffff;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid #eaeaea;
 }
 
 .fort-card img {
+    width: 100%;
+    height: auto;
     border-radius: 4px;
     margin-bottom: 1rem;
-    max-width: 100%;
-    height: auto;
+    display: block;
 }
 
 .fort-card ul {
@@ -63,49 +66,48 @@ main {
 }
 
 .fort-card h3 {
-    color: #1e3c72;
+    color: #2c3e50;
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .map-section {
     text-align: center;
-    background: white;
+    background: #f8f9fa;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 4px solid #3498db;
 }
 
 #mapButton {
-    background: #1e3c72;
+    background: #3498db;
     color: white;
     border: none;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 #mapButton:hover {
-    background: #2a5298;
+    background: #2980b9;
 }
 
 footer {
-    background: #333;
+    background: #2c3e50;
     color: white;
     text-align: center;
     padding: 1.5rem 0;
     margin-top: 2rem;
 }
 
-@media (min-width: 768px) {
-    .forts {
-        grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
     }
-}
-
-@media (min-width: 992px) {
-    .forts {
-        grid-template-columns: repeat(3, 1fr);
+    
+    main {
+        padding: 0 0.5rem;
     }
 }
