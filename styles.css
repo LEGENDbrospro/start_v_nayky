@@ -24,9 +24,10 @@ header h1 {
 }
 
 main {
-    max-width: 800px;
+    max-width: 100%;
     margin: 2rem auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
+    width: 100%;
 }
 
 .intro {
@@ -37,11 +38,33 @@ main {
     border-left: 4px solid #3498db;
 }
 
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
 .forts {
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.main-title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.fort-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    margin-bottom: 2rem;
+    width: 100%;
 }
 
 .fort-card {
@@ -51,6 +74,10 @@ main {
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     border: 1px solid #eaeaea;
     width: 100%;
+}
+
+.fort-card.full-width {
+    grid-column: 1 / -1;
 }
 
 .fort-card img {
@@ -144,33 +171,16 @@ main {
     margin-bottom: 1rem;
 }
 
-.fort-detail-content p {
-    margin-bottom: 1rem;
-}
-
-.fort-detail-content ul {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-footer {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 2rem;
-}
-
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
     }
     
     main {
-        padding: 0 0.5rem;
+        padding: 0 1rem;
     }
     
-    .forts {
+    .fort-grid {
         grid-template-columns: 1fr;
     }
 }
