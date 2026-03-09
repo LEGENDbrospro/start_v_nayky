@@ -5,8 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кронштадт - Город фортов</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .navbar {
+            background-color: #1a365d;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+        .navbar a:hover {
+            background-color: #2c5282;
+        }
+        .navbar a.active {
+            background-color: #2b6cb0;
+        }
+    </style>
 </head>
 <body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="fort-konstantin.html">Форт Константин</a></li>
+            <li><a href="fort-alexandr.html">Форт Александр I</a></li>
+            <li><a href="fort-petr.html">Форт Пётр I</a></li>
+            <li><a href="fort-kronshlot.html">Форт Кроншлот</a></li>
+            <li><a href="fort-pavel.html">Форт Павел I</a></li>
+            <li><a href="fort-milyutin.html">Форт Граф Милютин</a></li>
+            <li><a href="fort-mayak.html">Задний маяк</a></li>
+        </ul>
+    </nav>
+
     <header>
         <h1>Кронштадт - Жемчужина Балтики</h1>
     </header>
@@ -29,21 +75,21 @@
             
             <div class="fort-card">
                 <h3>Форт «Александр I» (Чумной)</h3>
-                <img src="images/fort-alexandr.jpg" alt="Форт Александра I - вид с воды" style="max-width: 100%; height: auto;">
+                <img src="images/fort-alexandr.png" alt="Форт Александра I - вид с воды" style="max-width: 100%; height: auto;">
                 <p>Форт «Алекса́ндр I» — одно из долговременных оборонительных сооружений, входящих в систему обороны Кронштадта. Расположен на небольшом искусственном островке к югу от острова Котлин. С 1899 по 1917 год использовался как лаборатория по исследованию чумы.</p>
                 <a href="fort-alexandr.html" class="fort-link">Подробнее о форте Александр I →</a>
             </div>
             
             <div class="fort-card">
                 <h3>Форт «Пётр I» (Цитадель)</h3>
-                <img src="images/fort-petr.jpg" alt="Форт Петра I - общий вид" style="max-width: 100%; height: auto;">
+                <img src="images/fort-petr.png" alt="Форт Петра I - общий вид" style="max-width: 100%; height: auto;">
                 <p>Форт «Пётр I» — памятник истории и архитектуры XVIII века. Создан для защиты Купеческой гавани с юга. Находится под охраной государства.</p>
                 <a href="fort-petr.html" class="fort-link">Подробнее о форте Пётр I →</a>
             </div>
             
             <div class="fort-card">
                 <h3>Форт «Кроншлот»</h3>
-                <img src="images/fort-kronshlot.jpg" alt="Форт Кроншлот - вид с моря" style="max-width: 100%; height: auto;">
+                <img src="images/fort-kronshlot.png" alt="Форт Кроншлот - вид с моря" style="max-width: 100%; height: auto;">
                 <p>Форт «Кроншлот» — памятник истории и архитектуры XVIII века. Расположен к югу от Кронштадта. Создан для защиты города от шведов во время Северной войны в 1704 году, несколько раз перестроен. Находится под охраной государства.</p>
                 <a href="fort-kronshlot.html" class="fort-link">Подробнее о форте Кроншлот →</a>
             </div>
@@ -64,7 +110,7 @@
             
             <div class="fort-card">
                 <h3>Задний створный маяк Морского канала</h3>
-                <img src="images/fort-mayak.jpg" alt="Задний створный маяк - вид" style="max-width: 100%; height: auto;">
+                <img src="images/fort-mayak.png" alt="Задний створный маяк - вид" style="max-width: 100%; height: auto;">
                 <p>Задний створный маяк Морского канала Кронштадта. Высота конструкции от основания 41 метр, высота огня над уровнем моря 40 метров, дальность видимости 13 миль. Был построен на искусственном островке между фортом Рисбанк и Кроншлотом в 1894 году, перестроен в 1914.</p>
                 <a href="fort-mayak.html" class="fort-link">Подробнее о Заднем створном маяке →</a>
             </div>
