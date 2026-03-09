@@ -1,1 +1,54 @@
-(images/fort-alexandr.png, images/fort-kronshlot.png, images/fort-mayak.png, images/fort-petr.png, fort-alexandr.html, fort-konstantin.html, fort-kronshlot.html, fort-mayak.html, fort-milyutin.html, fort-pavel.html, fort-petr.html, images/fort-konstantin.jpg, images/fort-milyutin.jpg, images/fort-pavel.jpg, index.html)
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
+dist/
+build/
+target/
+# Dependencies
+.venv/
+venv/
+node_modules/
+.mypy_cache/
+.pytest_cache/
+.coverage
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+# Environment
+.env
+.env.local
+*.env.*
+# Editors
+.vscode/
+.idea/
+# Coverage
+coverage/
+htmlcov/
+# Gradle
+.gradle/
+# Distribution packages
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
