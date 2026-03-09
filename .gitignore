@@ -1,1 +1,1 @@
-Nothing should be ignored in this case, as the changes consist only of HTML files which are source code/config files without any build artifacts, dependencies, or temporary files.
+(index.html is a source file, so no ignores needed)
