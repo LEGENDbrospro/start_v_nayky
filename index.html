@@ -37,58 +37,6 @@
         .navbar a.active {
             background-color: #2b6cb0;
         }
-        /* Стили для фотогалереи на главной странице */
-        .gallery-section {
-            padding: 3rem 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            margin-bottom: 2rem;
-            border-radius: 12px;
-        }
-        .photo-gallery-main {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .gallery-item-main {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            aspect-ratio: 4/3;
-            border: 4px solid white;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-        .gallery-item-main:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-        }
-        .gallery-item-main img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-        .gallery-item-main:hover img {
-            transform: scale(1.15);
-        }
-        .gallery-caption-main {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.85));
-            color: white;
-            padding: 1.5rem 1rem 1rem;
-            font-size: 1rem;
-            font-weight: 500;
-            transform: translateY(100%);
-            transition: transform 0.4s ease;
-            text-align: center;
-        }
-        .gallery-item-main:hover .gallery-caption-main {
-            transform: translateY(0);
-        }
     </style>
 </head>
 <body>
@@ -429,47 +377,6 @@
         <section class="map-section">
             <h2>Карта достопримечательностей Кронштадта</h2>
             <button id="mapButton" class="animate-on-scroll slide-up delay-1">Перейти к карте</button>
-        </section>
-
-        <!-- Фотогалерея для изображений без отдельных страниц фортов -->
-        <section class="gallery-section scroll-animate">
-            <div class="container">
-                <h2 class="section-title animate-on-scroll slide-up">📸 Фотогалерея</h2>
-                <div class="photo-gallery-main">
-                    <div class="gallery-item-main animate-on-scroll slide-up delay-1">
-                        <img src="Александр1.png" alt="Форт Александр I - дополнительный вид">
-                        <div class="gallery-caption-main">Форт Александр I - дополнительный вид</div>
-                    </div>
-                    <div class="gallery-item-main animate-on-scroll slide-up delay-2">
-                        <img src="Форт Петр 1.jpg" alt="Форт Петр I - историческое фото">
-                        <div class="gallery-caption-main">Форт Петр I - историческое фото</div>
-                    </div>
-                    <div class="gallery-item-main animate-on-scroll slide-up delay-3">
-                        <img src="КРоншлот1.png" alt="Форт Кроншлот - аэрофотосъемка">
-                        <div class="gallery-caption-main">Форт Кроншлот - аэрофотосъемка</div>
-                    </div>
-                    <div class="gallery-item-main animate-on-scroll slide-up delay-4">
-                        <img src="Мзанковская башня КРоншлота.jpg" alt="Мзанковская башня Кроншлота">
-                        <div class="gallery-caption-main">Мзанковская башня Кроншлота</div>
-                    </div>
-                    <div class="gallery-item-main animate-on-scroll slide-up delay-5">
-                        <img src="План Форта КРоншлот.jpg" alt="План форта Кроншлот">
-                        <div class="gallery-caption-main">План форта Кроншлот</div>
-                    </div>
-                    <div class="gallery-item-main animate-on-scroll slide-up delay-6">
-                        <img src="основание крепости КРоншлот.jpg" alt="Основание крепости Кроншлот">
-                        <div class="gallery-caption-main">Основание крепости Кроншлот</div>
-                    </div>
-                    <div class="gallery-item-main animate-on-scroll slide-up delay-7">
-                        <img src="Граф Милютин 1.jpg" alt="Форт Граф Милютин - современный вид">
-                        <div class="gallery-caption-main">Форт Граф Милютин - современный вид</div>
-                    </div>
-                    <div class="gallery-item-main animate-on-scroll slide-up delay-8">
-                        <img src="Задний створный маяк1.png" alt="Задний створный маяк - дополнительный вид">
-                        <div class="gallery-caption-main">Задний створный маяк - дополнительный вид</div>
-                    </div>
-                </div>
-            </div>
         </section>
     </main>
     
