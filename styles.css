@@ -190,4 +190,47 @@ footer {
     .fort-grid {
         grid-template-columns: 1fr;
     }
+    
+    /* Адаптация таймлайна для мобильных */
+    .timeline > div:first-child {
+        left: 20px !important;
+    }
+    
+    .timeline-item {
+        justify-content: flex-start !important;
+        padding-left: 50px !important;
+        padding-right: 0 !important;
+    }
+    
+    .timeline-item > div:first-child {
+        max-width: 100% !important;
+    }
+    
+    .timeline-item > div:last-child {
+        left: 10px !important;
+        right: auto !important;
+    }
+    
+    /* Адаптация словаря */
+    .glossary-section > div > div {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Уменьшение шрифтов в новых секциях */
+    .history-section h2,
+    .timeline-section h2,
+    .glossary-section h2,
+    .bibliography-section h2 {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Дополнительные стили для новых секций */
+.history-section ul li,
+.bibliography-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.timeline-section {
+    overflow-x: hidden;
 }
