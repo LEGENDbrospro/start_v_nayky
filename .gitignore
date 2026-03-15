@@ -1,46 +1,44 @@
-```
-# Compiled and binary files
+# Image files (if any are generated/temporary)
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
+*.webm
+
+# Build artifacts and generated files
 *.pyc
-*.class
+__pycache__/
 *.o
 *.obj
 *.out
-*.exe
-*.dll
-*.so
-*.a
+dist/
+build/
+target/
+coverage/
+htmlcov/
+*.log
+*.tmp
+*.swp
 
 # Dependencies
 node_modules/
 venv/
 .venv/
-__pycache__/
-dist/
-build/
-target/
-.gradle/
-.mypy_cache/
-.pytest_cache/
-
-# Editor/IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*.tmp
-
-# System files
-.DS_Store
-Thumbs.db
 .env
 .env.local
 *.env.*
 
-# Logs and coverage
-*.log
-coverage/
-htmlcov/
-.coverage
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+.git/
 
 # Compressed files
 *.zip
@@ -65,4 +63,565 @@ htmlcov/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
-```
+
+# Caching
+.mypy_cache/
+.pytest_cache/
+.coverage
+.cache/
+
+# Java/Gradle
+*.class
+*.jar
+*.war
+.gradle/
+build/
+
+# Python specific
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.tox/
+.hypothesis/
+
+# Node.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ruby
+*.gem
+.bundle/
+Gemfile.lock
+
+# Go
+*.exe
+*.dll
+*.so
+*.dylib
+
+# C/C++
+*.a
+*.lib
+*.obj
+*.o
+*.out
+*.exe
+*.dll
+*.so
+
+# Temporary files
+*~
+\#*\#
+*.bak
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Icon?
+VolumeIcon.icns
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+!.env.default
+
+# IDE specific
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+.settings/
+.project
+.classpath
+.pydevproject
+.vs/
+.vsc/
+.nyc_output/
+.nyc_coverage/
+coverage.xml
+lcov.info
+
+# Build systems
+Makefile~
+CMakeLists.txt.user
+cmake-build-*/
+compile_commands.json
+
+# Testing
+*.log
+test/
+tests/
+spec/
+
+# Documentation
+docs/_build/
+*.rst~
+
+# Database
+*.db
+*.db-journal
+
+# Web
+*.css.map
+*.js.map
+staticfiles/
+media/
+
+# Mobile
+*.apk
+*.ipa
+*.aab
+
+# Archives
+*.zip
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.7z
+*.rar
+*.dmg
+*.iso
+
+# Logs
+*.log
+logs/
+log/
+
+# Temporary
+tmp/
+temp/
+.tmp/
+*~
+
+# Cache
+.cache/
+*/cache/
+.caches/
+node_modules/.cache/
+
+# Lock files
+package-lock.json
+yarn.lock
+Pipfile.lock
+poetry.lock
+composer.lock
+
+# Distribution / packaging
+*.egg
+*.egg-info/
+dist/
+build/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.dist-info/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+coverage.xml
+*.cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+.Python
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# IDE
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/recommendations.json
+
+# Git
+.git/
+
+# GitHub
+.github/
+
+# GitLab
+.gitlab/
+
+# Bitbucket
+.bitbucket/
+
+# Temporary backup files
+*.bak
+*.backup
+*.old
+*.orig
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Icon?
+VolumeIcon.icns
+
+# Various archives
+*.7z
+*.rar
+*.gz
+*.tar
+*.bz2
+*.xz
+*.zip
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+
+# Images (if generated)
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
+*.webm
+*.svg
+*.ico
+*.tiff
+*.tif
+*.webp
+*.avif
+*.apng
+*.jfif
+*.pjpeg
+*.pjp
+*.bmp
+*.dib
+*.jpe
+*.jif
+*.jfif
+*.jfi
+*.svgz
+*.webp
+*.avifs
+*.avci
+*.avcs
+*.avcu
+*.heic
+*.heif
+*.hif
+*.jxl
+*.cur
+*.ani
+*.jfif
+*.jpe
+*.jif
+*.jfi
+*.pcx
+*.pic
+*.pct
+*.pict
+*.pnt
+*.pntg
+*.qif
+*.qtif
+*.sgi
+*.bw
+*.rgb
+*.rgba
+*.sgi
+*.xbm
+*.xpm
+*.dds
+*.exr
+*.hdr
+*.rgbe
+*.tga
+*.icns
+*.psd
+*.pdd
+*.psb
+*.xcf
+*.kra
+*.ora
+*.clip
+*.ufo
+*.ufoz
+*.glif
+*.plist
+*.nib
+*.car
+*.bundle
+*.app
+*.ipa
+*.apk
+*.aab
+*.msi
+*.deb
+*.rpm
+*.snap
+*.flatpak
+*.AppImage
+*.dmg
+*.iso
+*.img
+*.vhd
+*.vhdx
+*.vmdk
+*.ova
+*.ovf
+*.box
+*.vagrant
+*.tmp
+*.temp
+*.cache
+*.log
+*.lock
+*.pid
+*.sock
+*.socket
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+*.accdb
+*.ldb
+*.fdb
+*.gdb
+*.ndb
+*.sdf
+*.db-shm
+*.db-wal
+*.idx
+*.dat
+*.data
+*.bin
+*.hex
+*.dump
+*.dmp
+*.core
+*.stackdump
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+*.obj
+*.o
+*.a
+*.lib
+*.pyc
+*.pyo
+*.pyd
+*.class
+*.jar
+*.war
+*.ear
+*.swf
+*.swc
+*.pdb
+*.ilk
+*.exp
+*.map
+*.sym
+*.lst
+*.asm
+*.s
+*.o
+*.obj
+*.lib
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.class
+*.jar
+*.war
+*.sar
+*.rar
+*.zip
+*.tar
+*.gz
+*.bz2
+*.xz
+*.7z
+*.dmg
+*.iso
+*.img
+*.vhd
+*.vhdx
+*.vmdk
+*.ova
+*.ovf
+*.box
+*.vagrant
+*.tmp
+*.temp
+*.cache
+*.log
+*.lock
+*.pid
+*.sock
+*.socket
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+*.accdb
+*.ldb
+*.fdb
+*.gdb
+*.ndb
+*.sdf
+*.db-shm
+*.db-wal
+*.idx
+*.dat
+*.data
+*.bin
+*.hex
+*.dump
+*.dmp
+*.core
+*.stackdump
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+*.obj
+*.o
+*.a
+*.lib
+*.pyc
+*.pyo
+*.pyd
+*.class
+*.jar
+*.war
+*.ear
+*.swf
+*.swc
+*.pdb
+*.ilk
+*.exp
+*.map
+*.sym
+*.lst
+*.asm
+*.s
+*.o
+*.obj
+*.lib
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.class
+*.jar
+*.war
+*.sar
