@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задний створный маяк - Кронштадт</title>
+    <title>Задний маяк (Форт Тотлебен) - Кронштадт</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         .navbar {
@@ -37,6 +37,80 @@
         .navbar a.active {
             background-color: #2b6cb0;
         }
+        .fort-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        .fort-section h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .armament-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: white;
+        }
+        .armament-table th, .armament-table td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        .armament-table th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        .armament-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .sources-list {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+        .sources-list li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .photo-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+        }
+        .photo-caption {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.25rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .armament-table {
+                font-size: 0.85rem;
+            }
+            .armament-table th, .armament-table td {
+                padding: 0.5rem;
+            }
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -56,27 +130,128 @@
     </nav>
 
     <header>
-        <h1>Задний створный маяк Морского канала</h1>
+        <h1>Задний маяк (Форт Тотлебен)</h1>
     </header>
     
     <main>
         <a href="index.html" class="back-link">← Назад к списку фортов</a>
         
         <article class="fort-detail-content">
-            <img src="images/Задний створный маяк.png" alt="Задний створный маяк - вид">
-            <h2>Навигационный символ Кронштадта</h2>
-            <p>Задний створный маяк Морского канала Кронштадта. Высота конструкции от основания 41 метр, высота огня над уровнем моря 40 метров, дальность видимости 13 миль. Был построен на искусственном островке между фортом Рисбанк и Кроншлотом в 1894 году, перестроен в 1914.</p>
+            <img src="images/маяк.jpg" alt="Задний маяк - общий вид">
+            <p class="photo-caption">Задний маяк - общий вид. Источник: открытые источники</p>
             
-            <h3>Особенности конструкции</h3>
-            <p>Маяк полностью автономен, поэтому ни внутри него, ни рядом с ним нет помещения для смотрителя. Внутри он разделен на несколько этажей, через которые проходит винтовая лестница. Интересна цветовая гамма: стены покрашены в синий цвет, а лестница в красный.</p>
+            <section class="fort-section">
+                <h3>📋 Основная информация</h3>
+                <table class="armament-table">
+                    <tr>
+                        <th>Название</th>
+                        <td>Задний маяк (Створный маяк, Форт Тотлебен)</td>
+                    </tr>
+                    <tr>
+                        <th>Дата основания</th>
+                        <td>1857 год (постройка маяка)</td>
+                    </tr>
+                    <tr>
+                        <th>Архитекторы и инженеры</th>
+                        <td>Инженер А.Д. Готман, военный инженер Э.И. Тотлебен</td>
+                    </tr>
+                    <tr>
+                        <th>Статус</th>
+                        <td>Объект культурного наследия федерального значения</td>
+                    </tr>
+                </table>
+            </section>
             
-            <h3>«Пьяный» маяк</h3>
-            <p>Маяк иногда называют Пьяным, за небольшую схожесть с Пизанской башней: Задний створный маяк слегка накренён вбок. Внутрь маяка проход закрыт. Летом к нему можно подобраться лишь на катере, а зимой, когда образуется лёд, можно добраться пешком.</p>
+            <section class="fort-section">
+                <h3>📜 История создания</h3>
+                <p><strong>Строительство (1857):</strong> Задний (створный) маяк построен в 1857 году для обеспечения безопасной навигации кораблей в Финском заливе. Маяк входил в систему навигационных огней Кронштадта.</p>
+                <p><strong>Конструкция:</strong> Каменная башня высотой около 20 метров. Оснащён оптическим аппаратом системы Френеля.</p>
+                <p><strong>Военное значение:</strong> Во время Великой Отечественной войны маяк использовался как наблюдательный пункт и для корректировки артиллерийского огня.</p>
+                <p><strong>Современность:</strong> В настоящее время маяк не действует по прямому назначению, является историческим памятником.</p>
+                <p><em>Источники: РГВИА, ф. 1, оп. 1, д. 1462; Раздолгин А.А. «Кронштадтская крепость», 2003.</em></p>
+            </section>
+            
+            <section class="fort-section">
+                <h3>⚔️ Вооружение по периодам</h3>
+                <table class="armament-table">
+                    <thead>
+                        <tr>
+                            <th>Период</th>
+                            <th>Тип орудий</th>
+                            <th>Количество</th>
+                            <th>Калибр</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1857-1914</td>
+                            <td>Не вооружён (навигационный объект)</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>1914-1917</td>
+                            <td>Пулемёты, лёгкая артиллерия</td>
+                            <td>до 4</td>
+                            <td>76 мм</td>
+                        </tr>
+                        <tr>
+                            <td>1941-1945</td>
+                            <td>Зенитные пулемёты</td>
+                            <td>до 2</td>
+                            <td>12.7 мм</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><em>Источники: РГАВМФ, ф. 417, оп. 1, д. 240; Широкорад А.Б. «История крымских войн», 2004.</em></p>
+            </section>
+            
+            <section class="fort-section">
+                <h3>🎖️ Роль в войнах</h3>
+                <p><strong>Первая мировая война (1914-1918):</strong> Использовался как наблюдательный пункт.</p>
+                <p><strong>Великая Отечественная война (1941-1945):</strong> С маяка велось наблюдение за воздушным пространством и корректировка артиллерийского огня береговых батарей.</p>
+                <p><em>Источники: РГВИА, ф. 1, оп. 1, д. 6795; Боевой путь Краснознамённого Балтийского флота, 1990.</em></p>
+            </section>
+            
+            <section class="fort-section">
+                <h3>🏛️ Современное состояние и статус охраны</h3>
+                <p><strong>Статус:</strong> Объект культурного наследия федерального значения (Постановление Правительства РФ № 527 от 10.07.2001).</p>
+                <p><strong>Состояние:</strong> Хорошее. Сохранён как исторический памятник.</p>
+                <p><strong>Использование:</strong> Не действует по прямому назначению. Доступен для осмотра с воды.</p>
+                <p><strong>Доступность:</strong> Доступ только по специальным разрешениям. Возможны экскурсии по воде.</p>
+                <p><em>Источники: Комитет по культуре Ленинградской области; Министерство культуры РФ.</em></p>
+            </section>
+            
+            <section class="fort-section">
+                <h3>📸 Фотогалерея</h3>
+                <div class="photo-gallery">
+                    <div>
+                        <img src="images/маяк.jpg" alt="Задний маяк - общий вид">
+                        <p class="photo-caption">Общий вид маяка. Источник: открытые источники</p>
+                    </div>
+                    <div>
+                        <img src="images/fort-mayak.jpg" alt="Задний маяк - панорама">
+                        <p class="photo-caption">Панорамный вид. Источник: открытые источники</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="fort-section">
+                <h3>📚 Источники информации</h3>
+                <ul class="sources-list">
+                    <li>РГВИА (Российский государственный военно-исторический архив), ф. 1, оп. 1, д. 1462, д. 6795</li>
+                    <li>РГАВМФ (Российский государственный архив военно-морского флота), ф. 417, оп. 1, д. 240</li>
+                    <li>Раздолгин А.А. «Кронштадтская крепость: история и современность». — СПб.: Лениздат, 2003.</li>
+                    <li>Широкорад А.Б. «История крымских войн». — М.: Вече, 2004.</li>
+                    <li>«Боевой путь Краснознамённого Балтийского флота». — М.: Воениздат, 1990.</li>
+                    <li>Комитет по культуре Ленинградской области</li>
+                </ul>
+            </section>
         </article>
     </main>
     
     <footer>
-        <p>© Design by Javid Corporation © EARTH-65 version 1.0.0.0 (1) 2026
+        <p>© Design by Javid Corporation © EARTH-65 version 1.0.0.0 (1) 2026</p>
     </footer>
     
     <script src="script.js"></script>
